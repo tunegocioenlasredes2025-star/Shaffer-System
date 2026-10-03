@@ -38,11 +38,7 @@
     var lineas = ['Hola, quiero pedir el podógrafo digital en comodato.', '',
       'Nombre: ' + v('nombre'),
       'Especialidad: ' + v('especialidad')];
-    if (v('matricula')) lineas.push('Matrícula: ' + v('matricula'));
-    lineas.push('Consultorio en: ' + v('localidad'),
-      'Mi WhatsApp: ' + v('telefono'),
-      'Pacientes por semana con consulta de pie: ' + v('pacientes'));
-    if (v('mensaje')) lineas.push('', v('mensaje'));
+    lineas.push('Consultorio en: ' + v('localidad'), 'Mi WhatsApp: ' + v('telefono'));
     window.open('https://wa.me/' + WA + '?text=' + encodeURIComponent(lineas.join('\n')), '_blank', 'noopener');
   });
   form.addEventListener('input', function (e) {
